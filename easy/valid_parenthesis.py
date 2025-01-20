@@ -24,18 +24,14 @@ class Solution:
 
         stack = []
 
-        if s[0] in close_list:
-            return False
-
         for parenthesis in s:
-            if parenthesis in open_list:
-                stack.append(parenthesis)
-            elif parenthesis in close_list and not stack:
-                return False
-            elif stack and parenthesis in close_list and pairs[parenthesis] == stack[-1]:
-                stack.pop()
+            if parenthesis in close_list:
+                if stack and pairs[parenthesis] == stack[-1]:
+                    stack.pop()
+                else:
+                    return False
             else:
-                return False
+                stack.append()
         
         if not stack:
             return True
