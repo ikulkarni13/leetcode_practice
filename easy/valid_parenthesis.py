@@ -8,7 +8,7 @@ class Solution:
         # iterate thourgh the string
         # if first element in close => return false
         # if in open store in stack
-        # if in close, check if stack has the corresponding open, if yes, stack.pop(), else return false
+        # if in close (check if stacj is empty), check if stack has the corresponding open, if yes, stack.pop(), else return false
         # at the end, if stack empty, return true else false
 
         #O(N)
