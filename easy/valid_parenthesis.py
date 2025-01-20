@@ -42,14 +42,14 @@ class Solution:
     def isValid(self, s: str) -> bool:
         matches = ['()', '[]', '{}']
         openings = ['(', '[', '{']
-        stack = ['']
+        stack = []
 
         for char in s:
-            if (stack[-1] + char) in matches:
+            if stack and ((stack[-1] + char) in matches):
                 stack.pop()
             elif char in openings:
                 stack.append(char)
             else:
                 return False
         
-        return len(stack) == 1
+        return len(stack) == 0
