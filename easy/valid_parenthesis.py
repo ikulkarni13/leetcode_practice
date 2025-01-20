@@ -42,10 +42,18 @@ class Solution:
         else:
             return False
                 
-            
+    # Chad's solution O(N)        
+    def isValid(self, s: str) -> bool:
+        matches = ['()', '[]', '{}']
+        openings = ['(', '[', '{']
+        stack = ['']
 
-
-
-
+        for char in s:
+            if (stack[-1] + char) in matches:
+                stack.pop()
+            elif char in openings:
+                stack.append(char)
+            else:
+                return False
         
-
+        return len(stack) == 1
