@@ -24,3 +24,23 @@ class Solution:
             else:
                 complements[target-num] = index
 
+
+
+
+
+    def twoSum_chad(self, nums: List[int], target: int) -> List[int]:
+
+        # O(N^2) - Brute Force
+        # for i in range(len(nums)):
+        #     for j in range(i + 1, len(nums)):
+        #         if nums[i] + nums[j] == target:
+        #             return [i, j]
+
+        # O(N) - Optimal
+        compliments = {}
+
+        for i in range(len(nums)):
+            if (target - nums[i]) in compliments:
+                return [i, compliments[target - nums[i]]]
+            else:
+                compliments[nums[i]] = i
