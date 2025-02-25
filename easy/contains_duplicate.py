@@ -15,6 +15,15 @@ class Solution:
         
         return False
     
+        # brute force
+
+        for i in range(len(nums)): # 5
+            for j in range(i + 1, len(nums)): # 5
+                if nums[i] == nums[j]:
+                    return True
+
+        return False
+    
     def containsDuplicate_ira(self, nums: List[int]) -> bool:
 
         #O(n)
