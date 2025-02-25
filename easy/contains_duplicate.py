@@ -17,6 +17,7 @@ class Solution:
     
     def containsDuplicate_ira(self, nums: List[int]) -> bool:
 
+        #O(n)
         #iterate through the list and add elements of the list to a dict
         #if the element exists in the list return true
         #if not, add it to the list and make value 1
@@ -31,4 +32,17 @@ class Solution:
                 dict_count[num] = 1
         
    
+        # return False
+
+        #brute force - O(n^2)
+        #iterate through nums in the outer for loop
+        #inner for loop iterates over the rest of the elements to check if the current element exists
+        #if loop complete return false
+
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] == nums[j]:
+                    return True
+            
         return False
+    
