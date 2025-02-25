@@ -31,8 +31,7 @@ class Solution:
             else:
                 dict_count[num] = 1
         
-   
-        # return False
+        return False
 
         #brute force - O(n^2)
         #iterate through nums in the outer for loop
