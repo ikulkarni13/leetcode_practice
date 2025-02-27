@@ -1,5 +1,6 @@
 class Solution:
     def containsDuplicate_chad(self, nums: List[int]) -> bool:
+        
         # O(n) idea
         # iterate through the nums array, adding each value to a hash
         # if the value already exists within the hash, we found a duplicate and return true
