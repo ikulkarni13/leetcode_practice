@@ -33,12 +33,4 @@ class Solution:
         #iterate through nums and del the found elements in range_dict
         #return unmbers left in dict as an array
 
-        dissapeared = []
-        nums_set = set(nums)
-
-        for num in range(1, len(nums) + 1):
-            if num not in nums_set:
-                dissapeared.append(num)
-        
-        return dissapeared
         
