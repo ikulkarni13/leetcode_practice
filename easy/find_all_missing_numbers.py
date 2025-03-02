@@ -24,3 +24,21 @@ class Solution:
                 disappeared.append(num)
 
         return disappeared
+    
+    def findDisappearedNumbers_ira(self, nums: List[int]) -> List[int]:
+
+        #brute force - O(nlogn)
+        #sort nums
+        #create a range_dict that has all the numbers in the range
+        #iterate through nums and del the found elements in range_dict
+        #return unmbers left in dict as an array
+
+        n = len(nums)
+        range_dict = {i: "" for i in range(1,n+1)}
+
+        for num in nums:
+            if num in range_dict:
+                del range_dict[num]
+        
+        return list(range_dict.keys())
+        
