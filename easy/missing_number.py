@@ -19,3 +19,5 @@ class Solution:
     
         #O(n)
         return (sum(range(len(nums)+1)) - sum(nums))
+    
+    def missingNumber_chad(self, nums: List[int]) -> int:
