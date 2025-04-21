@@ -7,7 +7,7 @@ class Interval(object):
 """
 
 class Solution:
-    def canAttendMeetings(self, intervals: List[Interval]) -> bool:
+    def canAttendMeetingsChad(self, intervals: List[Interval]) -> bool:
         intervals.sort(key=lambda x: x.start)
 
         for i in range(1, len(intervals)):
